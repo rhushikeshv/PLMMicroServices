@@ -58,6 +58,13 @@ minikube addons enable ingress
 ```
 docker build --no-cache -t plm-microservices-app:latest .
 ```
+# IP address from WSL2 into configmap.yaml
+find the ip address from wsl2 using command 
+```
+ip addr show eth0
+```
+insert the ip address into configmap.yaml
+DB_HOST: "172.25.116.59" # get ip using wsl command for eth0
 
 # Deploy K8s file using the commands below
 ```
